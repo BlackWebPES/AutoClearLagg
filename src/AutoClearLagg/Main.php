@@ -41,7 +41,7 @@ class Main extends PluginBase{
         if(is_numeric($this->settings->get("seconds"))){
             $this->getScheduler()->scheduleRepeatingTask(new TimerTask($this, (int) $this->settings->get("seconds")), 20);
         }else{
-            $this->getLogger()->error("Plugin Disabled! Please enter a number for the seconds");
+            $this->getLogger()->error("plugin disabled please enter a number for the seconds");
             $this->getServer()->getPluginManager()->disablePlugin($this);
         }
     }
